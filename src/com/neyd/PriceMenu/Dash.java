@@ -8,7 +8,7 @@ public class Dash {
 
     String name;
 
-    public Dash(int price,String name){
+    public Dash(int price, String name) {
 
         this.name = name;
         this.price = price;
@@ -18,7 +18,7 @@ public class Dash {
     public String toString() {
         return String.format(
                 "%3s по ціні %d",
-                this.name,this.price
+                this.name, this.price
         );
     }
 
