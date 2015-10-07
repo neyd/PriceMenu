@@ -1,5 +1,7 @@
 package com.neyd.PriceMenu;
+
 import java.util.Scanner;
+
 /**
  * Created by Женя on 07.10.2015.
  */
@@ -36,10 +38,9 @@ public class PriceMenu {
                 System.out.println("Скільки порцій ви бажаєте?");
                 res2 = Integer.parseInt(scanner.nextLine());
                 if (res2 >= 1)
-                    if (money >= (res2-1)*dishs[res - 1].price) {
-                        money = money - (res2-1)*(dishs[res - 1].price);
-                    }
-                else{
+                    if (money >= (res2 - 1) * dishs[res - 1].price) {
+                        money = money - (res2 - 1) * (dishs[res - 1].price);
+                    } else {
                         money = money + (dishs[res - 1].price);
                         System.out.println("У вас тільки " + money + "грн" + " ви не можете це придбати");
                         System.out.println("З вас " + (maxMoney - money) + "грн");
@@ -49,12 +50,12 @@ public class PriceMenu {
                 res = Integer.parseInt(scanner.nextLine());
             } else {
                 System.out.println("У вас тільки " + money + "грн" + " ви не можете це придбати");
-                System.out.println("З вас " + (maxMoney-money) + "грн");
+                System.out.println("З вас " + (maxMoney - money) + "грн");
                 break;
             }
 
             if (res == 0) {
-                System.out.println("З вас " + (maxMoney-money) + "грн");
+                System.out.println("З вас " + (maxMoney - money) + "грн");
                 break;
             }
 
