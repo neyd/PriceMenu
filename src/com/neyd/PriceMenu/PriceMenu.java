@@ -14,7 +14,7 @@ public class PriceMenu {
         dashs[4] = new Dash(6, "Компот");
 
 
-        // Вивести всі пропозиції
+
         for (int i = 0; i < dashs.length; i++) {
             System.out.println(dashs[i]);
 
