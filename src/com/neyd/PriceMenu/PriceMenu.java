@@ -41,10 +41,13 @@ public class PriceMenu {
                     if (money >= (res2 - 1) * dishs[res - 1].price) {
                         money = money - (res2 - 1) * (dishs[res - 1].price);
                     } else {
-                        money = money + (dishs[res - 1].price);
+                        money = money + (res2-1) * (dishs[res - 1].price);
                         System.out.println("У вас тільки " + money + "грн" + " ви не можете це придбати");
                         System.out.println("З вас " + (maxMoney - money) + "грн");
                     }
+                else {
+                    money = money - (res2-1) * (dishs[res - 1].price);
+                }
 
                 System.out.println("Щось ще будете брати?     " + "У вас залишилось " + money + "грн");
                 res = Integer.parseInt(scanner.nextLine());
