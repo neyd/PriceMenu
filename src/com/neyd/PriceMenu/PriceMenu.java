@@ -14,9 +14,9 @@ public class PriceMenu {
         Scanner scanner = new Scanner(System.in);
         Dish[] dishs = new Dish[10];
         dishs[0] = new Dish(1, 13, "2-ге", "Гречка");
-        dishs[1] = new Dish(2, 8, "Гарнір", "Підлива з м'ясом");
+        dishs[1] = new Dish(2, 8, "До другого", "Підлива з м'ясом");
         dishs[2] = new Dish(3, 15, "2-ге", "Картошка");
-        dishs[3] = new Dish(4, 13, "Гарнір", "Відбивна");
+        dishs[3] = new Dish(4, 13, "До другого", "Відбивна");
         dishs[4] = new Dish(5, 6, "Випивка", "Компот");
         dishs[5] = new Dish(6, 11, "Салат", "Цезарь");
         dishs[6] = new Dish(7, 8, "Випивка", "Кока-кола");
@@ -27,6 +27,7 @@ public class PriceMenu {
             System.out.println(dishs[i]);
 
         }
+
         System.out.println("Скільки у вас грошей?");
         money = Integer.parseInt(scanner.nextLine());
         maxMoney = money;
@@ -41,12 +42,12 @@ public class PriceMenu {
                     if (money >= (res2 - 1) * dishs[res - 1].price) {
                         money = money - (res2 - 1) * (dishs[res - 1].price);
                     } else {
-                        money = money + (res2-1) * (dishs[res - 1].price);
+                        money = money + (res2 - 1) * (dishs[res - 1].price);
                         System.out.println("У вас тільки " + money + "грн" + " ви не можете це придбати");
                         System.out.println("З вас " + (maxMoney - money) + "грн");
                     }
                 else {
-                    money = money - (res2-1) * (dishs[res - 1].price);
+                    money = money - (res2 - 1) * (dishs[res - 1].price);
                 }
 
                 System.out.println("Щось ще будете брати?     " + "У вас залишилось " + money + "грн");
