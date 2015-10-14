@@ -11,6 +11,7 @@ public class PriceMenu {
         int maxMoney;
         int res;
         int res2;
+        int res3;
         Scanner scanner = new Scanner(System.in);
         Dish[] dishs = new Dish[10];
         dishs[0] = new Dish(1, 13, "2-ге", "Гречка");
@@ -25,9 +26,7 @@ public class PriceMenu {
         dishs[9] = new Dish(10, 5, "Випічка", "Кекс");
         for (int i = 0; i < dishs.length; i++) {
             System.out.println(dishs[i]);
-
         }
-
         System.out.println("Скільки у вас грошей?");
         money = Integer.parseInt(scanner.nextLine());
         maxMoney = money;
@@ -62,7 +61,6 @@ public class PriceMenu {
                 System.out.println("З вас " + (maxMoney - money) + "грн");
                 break;
             }
-
         }
     }
 }

@@ -14,6 +14,7 @@ public class Dish {
         this.name = name;
         this.type = type;
         this.price = price;
+
     }
 
     public String toString() {
